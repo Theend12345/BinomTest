@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.ui.MapFragment">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#549384" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="40dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/zoom_minus_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:src="@drawable/ic_zoom_minus_55dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/zoom_plus_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:src="@drawable/ic_zoom_plus_55dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/my_location_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:src="@drawable/ic_mylocation_55dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/next_tracker_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:src="@drawable/ic_next_tracker_55dp" />
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <include
+            android:id="@+id/bottom_container"
+            layout="@layout/bottom_sheet"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>
